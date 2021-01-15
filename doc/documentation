@@ -1,0 +1,49 @@
+Proiect parcare autonoma
+Este o parcare cu baiera de 100 de locuri.
+I se afiseaza pretul pe ora, si pe zi precum si penalizarile daca nu e ok ceva(de detaliat) si un mesaj ce trebuie sa faca conducatorii inainte de a iesi.
+De a plati
+Fiecare masina care intra are ca si date de intrare data, ora si numarul de inmatriculare trecute in baza de date.
+La iesire, se verifica cat a stat parcata si daca a platit. In caz ca a depasit cu pana la 3 minute, bariera se ridica
+In baza de date o sa apara doar ca e ok, in caz ca nu e ok se aplica sanctiune.
+Dupa ce masina a iesit din parcare si totul e ok, se sterge din baza de date.
+Dupa ce intra o masina sau iese din parcare sa se actualizeze automat numarul de locuri disponibile.
+
+Task:
+- Afisez detaliile despre costuri&penalizari ale parcarii && locuri disponibile
+- Panou de control1: nr de locuri disponibile, pret pe ora/zi/noapte, modalitate de achitare(cas/card),
+- Panou de control1: preia tichet   ++ cheama asistenta
+
+Task1:
+- Creare script baze de date
+- 1 tabel in care retin nr inm., data&ora la care a intrat
+    Tabel 1:              tabel2:               tabel3(InfoParcare)
+                        - informatii tichet       id
+- id   PK             - nr. Inmatriculare,       nrLocuriDisponibile
+- data                - oraIntrare               nrMasiniInParcare
+-                     - id tichet  FK
+
+Tichete                 InformatiiTichet
+1 | 1/13/2021           is-02-1 | 12:00 | 2
+2 | 2/14/2020
+
+Task-001: Script sql pt cele 2 tabele
+Scriptul va contine:
+->crearea celor doua tabele
+->constraints
+Testezi scriptul in sql si apoi dai commit la script
+
+Task-002: switch pt cele doua meniuri
+
+Task-003: Functia de preluare tichet
+
+
+MESAJUL DE COMMIT:
+
+ID_TASK : MESAJUL TAU
+
+001 : Script db
+
+Flow:
+Fiecare task il faci pe branch separat
+deschizi pr pt fiecare branch
+dupa ce ai rezolvat toate comentariile de pe pr vei da merge la branch cu master
