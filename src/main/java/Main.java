@@ -12,7 +12,7 @@ public class Main {
         Scanner s = new Scanner(System.in);
         try {
             String url = "jdbc:mysql://localhost:3306/AutonomParking";
-            Connection conn = DriverManager.getConnection(url, "root", "slghtlt1");
+            Connection conn = DriverManager.getConnection(url,"root","slghtlt1");
             Class.forName("com.mysql.jdbc.Driver");
             Statement st = conn.createStatement();
             System.out.println("Choose an option: ");
