@@ -17,15 +17,24 @@ public class Main {
             Statement st = conn.createStatement();
             System.out.println("Choose an option: ");
             int var = s.nextInt();
-            switch(var){
+            switch (var) {
                 case 1:
-                    System.out.println("Insert VehicleNr: ");
-                    String vehNr = s.next();
-                    SimpleDateFormat formatter= new SimpleDateFormat("dd.MM.yy");
-                    Date date = new Date(System.currentTimeMillis());
-                    System.out.println(formatter.format(date));
-                    st.executeUpdate("Insert INTO InforTichet "+"VALUES(default, '"+vehNr+"', '"+formatter.format(date)+"')");
+//                    System.out.println("Insert VehicleNr: ");
+//                    String vehNr = s.next();
+//                    SimpleDateFormat formatter= new SimpleDateFormat("dd.MM.yy");
+//                    Date date = new Date(System.currentTimeMillis());
+//                    System.out.println(formatter.format(date));
+//                    st.executeUpdate("Insert INTO InforTichet "+"VALUES(default, '"+vehNr+"', '"+formatter.format(date)+"')");
+                    System.out.println("Do you wanna check available nr. of the par");
                     break;
+                case 2:
+                    System.out.println("Your tichet");
+                    break;
+                case 3:
+                    System.out.println("Payment area");
+                default:
+                    System.out.println("Choose a valid option");
+
             }
 
 
