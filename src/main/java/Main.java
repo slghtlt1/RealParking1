@@ -66,17 +66,19 @@ public class Main {
 
         String sql = "Select IDTichet, NrInmatriculare, OraIntrare from InforTichet";
         ResultSet rs = st.executeQuery(sql);
-
+        int id = 0;
         while (rs.next()) {
-            int id = rs.getInt("IDTichet");
+            id = rs.getInt("IDTichet");
             String nrInmatriculare = rs.getString("NrInmatriculare");
             Date dateEntry = rs.getDate("OraIntrare");
 
-            if (id == tichetID)
+            if (id == tichetID) {
                 System.out.println("ID with nr " + id + ", and Nr registration " + nrInmatriculare + ", you entered at this hour:" + dateEntry);
-            else break;
+                break;
+            } else
+                System.out.println("Enter a valid option, please repet");
         }
-        System.out.println("Enter a valid option, please repet");
+
     }
 
 }
