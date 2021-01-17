@@ -47,3 +47,8 @@ Flow:
 Fiecare task il faci pe branch separat
 deschizi pr pt fiecare branch
 dupa ce ai rezolvat toate comentariile de pe pr vei da merge la branch cu master
+
+
+
+ma duc pe github pull req la file changes, dau un click pe fiecare fisier si dau delete
+ma duc pe master local si ii dau un git pull, fac un branch nou si fac treaba mai departe
