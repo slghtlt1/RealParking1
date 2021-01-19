@@ -75,3 +75,12 @@ UNLOCK TABLES;
 
 -- Dump completed on 2021-01-17 22:29:07
 
+ALTER TABLE `AutonomParking`.`InforTichet`
+ADD INDEX `IDTichet` (`IDTichet` ASC) VISIBLE;
+
+ALTER TABLE `AutonomParking`.`Tichete`
+ADD CONSTRAINT `ID`
+  FOREIGN KEY ()
+  REFERENCES `AutonomParking`.`Tichete` ()
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
